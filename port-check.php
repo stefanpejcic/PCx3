@@ -1,6 +1,7 @@
 <?php
 
-$host = '142.250.190.46';
+$host = $_SERVER['SERVER_ADDR'];
+//$host = '142.250.190.46';
 $ports = array(21, 25, 80, 81, 110, 443, 3306);
  
 foreach ($ports as $port)
