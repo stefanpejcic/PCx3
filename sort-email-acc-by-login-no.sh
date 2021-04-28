@@ -1,0 +1,1 @@
+head -1 /var/log/exim_mainlog | awk '{print $1}' ; egrep -o 'dovecot_login[^ ]+|dovecot_plain[^ ]+' /var/log/exim_mainlog | cut -f2 -d":" | sort|uniq -c|sort -nk 1 ; tail -1 /var/log/exim_mainlog | awk '{print From $1}'2020-12-25
